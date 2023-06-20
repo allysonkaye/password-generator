@@ -56,7 +56,9 @@ function myPassword() {
             text.innerHTML = "Click Generate button!";
         } else {
             navigator.clipboard.writeText(copyText).then(() => {
-            
+
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
             text.style.visibility = "visible";
             text.style.color = "#3b82f6";
             text.innerHTML = "Copied To Clipboard!";
